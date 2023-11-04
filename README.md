@@ -18,3 +18,4 @@
 * Vite
 * Storybook
 * ESLint
+* Prettier
