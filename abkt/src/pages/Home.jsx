@@ -2,42 +2,24 @@ import React from "react";
 import HModule from "../styles/Home.module.css";
 import CssBaseline from "@mui/material/CssBaseline";
 import { StyledEngineProvider } from "@mui/material";
-import Header from "../modules/HeaderGuest";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import titleLogo from "../assets/brain_logo.png";
 import { useState } from "react";
-import reactLogo from "../assets/react.svg";
-import viteLogo from "/vite.svg";
-import { Button } from "@mui/material";
-
 export const Home = () => {
   const [count, setCount] = useState(0);
 
   return (
-    <StyledEngineProvider>
-      <CssBaseline />
-      <Header />
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className={HModule.logo} alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Abkt + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-      <Button variant="contained" color="primary">
-        Click me!
-      </Button>
-    </StyledEngineProvider>
+    <>
+      <StyledEngineProvider>
+        <CssBaseline />
+        <div className={HModule.icon_around}>
+          <img src={titleLogo} className={HModule.icon_around} alt="title" />
+        </div>
+        <p className={HModule.title}>アイデア足りてる？</p>
+        <div className={HModule.go_down}>
+          <ExpandMoreIcon />
+        </div>
+      </StyledEngineProvider>
+    </>
   );
 };
